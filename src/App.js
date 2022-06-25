@@ -1,13 +1,14 @@
-import CustomTextInput from "./Components/CustomInputWithRef";
-import { IncrementNumber } from './Components/Hooks'
+// import CustomTextInput from "./Components/CustomInputWithRef";
+// import { IncrementNumber } from './Components/Hooks'
+import {Contexto} from './Components/Context/context'
 
 function App() {
   return (
     <div className="container">
-      <CustomTextInput />
+      {/* <CustomTextInput />
       <br/>
-      <IncrementNumber number={5}/>
-
+      <IncrementNumber number={5}/> */}
+      <Contexto/>
     </div>
   );
 }
