@@ -1,14 +1,15 @@
 import React, {Component, createContext} from "react";
 import Toolbar from "./toolbar";
 
-export const ThemeContext = createContext('red');
+import { ThemeContextProvider } from "./provider";
+
 
 export class Contexto extends Component {
   render() {
     return (
-      <ThemeContext.Provider value="black">
-        <Toolbar />
-      </ThemeContext.Provider>
+        <ThemeContextProvider>
+            <Toolbar />
+        </ThemeContextProvider>
     );
   }
 }

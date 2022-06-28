@@ -1,4 +1,4 @@
-import ThemedButton from "./button";
+import ThemedButton from "./button-consumer";
 
 function Toolbar() {
     return (

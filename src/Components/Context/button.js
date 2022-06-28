@@ -1,23 +1,19 @@
 import React from "react";
-import { ThemeContext } from './context'
+import { ThemeContext } from './provider'
 
 class ThemedButton extends React.Component {
-    // static contextType = ThemeContext;
+    static contextType = ThemeContext;
     render() {
-        return(
-            <ThemeContext.Consumer >
-                {(theme)=>{
-                    console.log("Them",theme)
-                    return (
-                        <button style={{background: theme, border:"2px solid black", color:"white"}} >
-                        Theme Button
-                      </button>
-                    )
-                }
-                }
-            </ThemeContext.Consumer>
-        )
-    }
+        const {isLightTheme,light, dark}=this.context
+        const theme=isLightTheme?light:dark
+                return (
+                    <button style={{background: theme.ui, 
+                                    border:"2px solid black", 
+                                    color:theme.syntax}} >
+                    Theme Button
+                    </button>
+                )
+            }
   }
 
 
